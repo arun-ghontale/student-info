@@ -1,0 +1,80 @@
+/* ****************** Input styles for search box */
+
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #000;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type="text"].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type="text"].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}
+
+.input-field input:focus + label{
+  color: #1976d2 !important;
+}
+input#student-search-query:focus, textarea#custom-mail:focus {
+  border-bottom: 1px solid #1e88e5 !important;
+  box-shadow: 0 1px 0 0 #1e88e5 !important
+}
+
+
+thead{
+  border-bottom: 1px solid gray;
+  background-color: #1e88e5;
+  color: white;
+}
+
+/* *********************************************************** */
+/* these styles are for student.html */
+#basic_details tr{
+  border-bottom: none;
+}
+
+textarea.materialize-textarea{
+  height:9rem !important;
+  margin-bottom: 1rem;
+}
+
+.card-content{
+  padding: 1rem !important;
+}
+
+#basic_details{
+  height: 18rem;
+}
+
+#send-email{
+  /* border: 2px solid #0075ff54; */
+  /* width: 100%; */
+  /* padding: 1rem 2rem;
+  height: 4.3rem;
+  font-size: 1.2rem; */
+  border-radius: 1px 15px 1px 15px;
+}
+
+.flow-text{
+  font-size:1.2rem
+}
+
+a#send-email:hover, a#send-email:focus {
+  box-shadow: -2px 5px #2765a238;
+}

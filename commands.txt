@@ -1,0 +1,6 @@
+1. Start the mongod server with mongod --dbpath=your_path_here
+2. start the server using npm start
+3. put the assignment dump into the mongo DB using:
+>> node csv_to_json_assignment.js file=2018-12-04.csv -> file present in .\ASSIGNMENT_DETAILS\
+4. put the student dump into the mongo DB using:
+>> node csv_to_json_student.js file="student_details_08_Dec_2018.csv" -> file present in .\STUDENT_DETAILS\

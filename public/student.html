@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>AAIC Student dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- load handlebar.js --- a template loading library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" ></script>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    </head>
+    <body>
+        <div class="center white-text blue darken-2" style="bakground-color:#039be5;">
+                <h3 style="margin:0px;margin-bottom:3rem;padding: 1.5rem 0"> AAIC Student Dashboard </h3>
+        </div>
+        <div class="container" style="order:1px solid rgba(114, 76, 76, 0.288)">
+            <div class="row">
+                
+                <!-- It will display some basic student details. -->
+                <div class="col s12 m12 l6">
+                    <div class="card-panel" id="basic_details">
+                        <table class="flow-text">
+                            <tr prop="name"><td>Name</td><td>:</td><td></td></tr>
+                            <tr prop="email"><td>Email</td><td>:</td><td></td></tr>
+                            <tr prop="classroom"><td>Classroom</td><td>:</td><td></td></tr>
+                            <tr prop="ass_count"><td>Assignments</td><td>:</td><td>__/__</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- --------------------------------------------- -->
+                
+                <!-- a text area and send mail function. -->
+                <div class=" card col s12 m12 l6">
+                    <div class="card-content input-field col s12">
+                        <textarea rows="1" id="custom-mail"
+                            class="materialize-textarea" style="font-size:1.2rem"
+                            placeholder="This is the custom message that will be sent to the student and this will be added to his/her progress information at the end in the email."></textarea>
+                        <div class="col s12 center" style="padding:0">
+                            <a id="send-email" class="waves-effect  btn-flat btn-large blue darken-1 white-text">
+                                Send email
+                                <i class="material-icons right">
+                                    mail_outline
+                                </i>
+                            </a>    
+                            <i class="material-icons">
+                                <span></span>
+                                <div class="hide preloader-wrapper small active" style="position: relative;top: 12px;">
+                                        <div class="spinner-layer spinner-blue-only"> 
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                            </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                            </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                </div> 
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------------------------------  -->
+            </div>
+            
+            <!-- Table for showing Assignments informations -->
+            <div class="row">
+                <div class="col s12" style="padding-right:0px">
+                    <!-- <div class="card-panel">
+                        <h4><strong>Assignment information : </strong></h4>                                
+                    </div> -->
+                    <div class="card-panel no-padding">
+                        <table class="striped centered">
+                            <thead style="border-bottom : 1px solid gray">
+                                <th>S.No</th>
+                                <th>Assignment</th>
+                                <th>Firsst Submission</th>
+                                <th>Last Submission</th>
+                                <th>Last Active</th>
+                                <th>#Re-submissions</th>
+                                <th>Accepted</th>
+                            </thead>
+                            <tbody id="assignment_list">
+                                <script id="ass_row_template" type="text/x-handlebars-template">
+                                    <tr style="border-bottom:none">
+                                        <td>{{s_no}}</td>
+                                        <td><strong>{{assignment_name}}</strong></td>
+                                        <td>{{first_submission_time}}</td>
+                                        <td>{{latest_submission_time}}</td>
+                                        <td>{{latest_active_time}}</td>
+                                        <td>{{resub_count}}</td>
+                                        <td>{{done_status}}</td>
+                                    </tr>
+                                </script>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- --------------------------------------  -->
+        </div>
+        
+        <script src="/js/libs/jquery-3.3.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <script src="js/student.js"></script>
+    </body>
+</html>

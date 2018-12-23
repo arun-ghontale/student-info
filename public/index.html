@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>AAIC Student dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- load handlebar.js --- a template loading library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" ></script>
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <div class="center white-text blue darken-2" style="bakground-color:#039be5;">
+      <h3 style="margin:0px;margin-bottom:3rem;padding: 1.5rem 0"> AAIC Student Dashboard </h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- form for searching for a student -->
+        <form class="col s12" id="search-form">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="student-search-query" type="text" required />
+              <label for="student-search-query">search for a student</label>
+              <span class="helper-text">You can search by his name or email</span>
+            </div>
+          </div>
+        </form>
+        <!-- end of form -->
+
+        <!-- place where we can show some results. -->
+        <div class="results-header" style="display:none">
+          .
+        </div>
+        <div class="hide" style="border:1px solid #039be5">
+
+        </div>
+        <table class="striped centered" style="display:none">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Student_name</th>
+                <th>Eamil ID</th>
+                <th>Classroom Name</th>
+                <th class="center">Assignment Status</th>
+                <th>Profession</th>
+                <th>Placement</th>
+              </tr>
+            </thead>
+            <tbody id="search-results-rows">
+              <script id="search-result-template" type="text/x-handlebars-template">
+                <tr id="{{student_id}}">
+                    <td name="sno">{{sno}}</td>
+                    <td name="student_name">
+                      <a onclick="getStudInfo.call(this)" style="cursor:pointer">{{student_name}}</a>
+                    </td>
+                    <td name="email_id">{{email_id}}</td>
+                    <td name="classroom_name">{{classroom_name}}</td>
+                    <td class="center" name="assignments">{{assignmentCompleted}}/{{assignmentAttempted}}</td>
+                    <td>NA</td>
+                    <td>NA</td>
+                </tr>
+              </script>
+            </tbody>
+        </table>
+
+        <!-- place when we will display the student information -->
+        
+
+       </div>
+    </div>
+
+    <script src="/js/libs/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
