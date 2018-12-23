@@ -53,6 +53,7 @@ csv()
                     ` Student name: ${data.student_name}, Error: ${response.Error}` +
                     "\n";
             }
+            console.log(responseStatus)
             totalDocs += 1;
         });
         sendMail({
