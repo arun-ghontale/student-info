@@ -37,7 +37,7 @@ csv()
         auc_score: 0,
       };
       //sync request
-      var res = syncRequest("POST", "http://localhost:3000/assignment", {
+      var res = syncRequest("POST", "http://206.189.140.119:3000/assignment", {
         json: data
       });
       var response = JSON.parse(res.getBody("utf8"));

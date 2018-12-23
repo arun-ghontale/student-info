@@ -25,7 +25,7 @@ csv()
         logStatus = "";
         jsonObjList.forEach(jsonObj => {
 
-            let res_get = syncRequest("GET", `http://localhost:3000/assignment/counts/${String(jsonObj["Links"].split("/").slice(-2)[0])}`);
+            let res_get = syncRequest("GET", `http://206.189.140.119:3000/assignment/counts/${String(jsonObj["Links"].split("/").slice(-2)[0])}`);
             var response_get = JSON.parse(res_get.getBody("utf8"));
 
             if (response_get.assignmentAttempted) {
@@ -42,7 +42,7 @@ csv()
                 assignmentCompleted: response_get.assignmentCompleted ? response_get.assignmentCompleted : 0
             };
             //sync request
-            let res_post = syncRequest("POST", "http://localhost:3000/student/create", {
+            let res_post = syncRequest("POST", "http://206.189.140.119:3000/student/create", {
                 json: data
             });
             var response = JSON.parse(res_post.getBody("utf8"));
