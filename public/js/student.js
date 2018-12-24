@@ -103,7 +103,7 @@ $(document).ready(function(){
                         +"Google Classroom Name : "+student.classroom_name+"<br/><br/>";
 
         // console.log(mail_body + custom_msg + "");
-        const to_and_body = {"to" : "ramanareddysane@gmail.com",
+        const to_and_body = {"to" : student.email_id,
                         "text" : mail_body + "<br/><br/>" + custom_msg + "<br/><br/>" + $(".striped").html() + "\n\n"}
 
         // M.toast({"html" : "Mail to ramanareddysane@gmail.com is Successful", classes: 'rounded'});
