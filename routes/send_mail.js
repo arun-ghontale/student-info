@@ -3,16 +3,16 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose')
 const sendMail = require('../send_student_report')
-
+const emailDetails = require('../details.js')
 //POST to send mail
 router.post('/', (req, res, next) => {
     const io = req.app.get('socketio');
 
     sendMail({
-        from: '',
-        pass: '',
+        from: emailDetails.EMAIL,
+        pass: emailDetails.PASSWORD,
         to: String(req.body.to),
-        subject: 'Student Report',
+        subject: 'Candidate Progress Report : Applied AI Course',
         text: req.body.text,
         resObj: res,
         ioObj: io

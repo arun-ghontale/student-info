@@ -74,26 +74,26 @@
                         <h4><strong>Assignment information : </strong></h4>                                
                     </div> -->
                     <div class="card-panel no-padding">
-                        <table class="striped centered">
+                        <table class="striped">
                             <thead style="border-bottom : 1px solid gray">
-                                <th>S.No</th>
-                                <th>Assignment</th>
-                                <th>Firsst Submission</th>
-                                <th>Last Submission</th>
-                                <th>Last Active</th>
-                                <th>#Re-submissions</th>
-                                <th>Accepted</th>
+                                <th style="text-align:center">S.No</th>
+                                <th style="text-align:center">Assignment</th>
+                                <th style="text-align:center">Firsst Submission</th>
+                                <th style="text-align:center">Last Submission</th>
+                                <th style="text-align:center">Last Active</th>
+                                <th style="text-align:center">#Re-submissions</th>
+                                <th style="text-align:center">Accepted</th>
                             </thead>
                             <tbody id="assignment_list">
                                 <script id="ass_row_template" type="text/x-handlebars-template">
                                     <tr style="border-bottom:none">
-                                        <td>{{s_no}}</td>
-                                        <td><strong>{{assignment_name}}</strong></td>
-                                        <td>{{first_submission_time}}</td>
-                                        <td>{{latest_submission_time}}</td>
-                                        <td>{{latest_active_time}}</td>
-                                        <td>{{resub_count}}</td>
-                                        <td>{{done_status}}</td>
+                                        <td style="text-align:center">{{s_no}}</td>
+                                        <td style="text-align:center"><strong>{{assignment_name}}</strong></td>
+                                        <td style="text-align:center">{{first_submission_time}}</td>
+                                        <td style="text-align:center">{{latest_submission_time}}</td>
+                                        <td style="text-align:center">{{latest_active_time}}</td>
+                                        <td style="text-align:center">{{resub_count}}</td>
+                                        <td style="text-align:center">{{done_status}}</td>
                                     </tr>
                                 </script>
                             </tbody>
@@ -107,7 +107,7 @@
         <script src="/js/libs/jquery-3.3.1.min.js"></script>
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        
+        <script src="/socket.io/socket.io.js"></script>
         <script src="js/student.js"></script>
     </body>
 </html>

@@ -1,25 +1,9 @@
-var socket = io();
-
-
-
 $(window).on("beforeunload", function () {
     $.get("http://206.189.140.119:3000/sessions/logout",
         function (data) {
             console.log("Data: " + data);
         });
     // return confirm("Do you really want to close?");
-})
-
-socket.on('mailStatus', (msg) => {
-    // $.getJSON('https://httpbin.org/ip', function(data) {
-    //             console.log(typeof data['origin'],data);
-    // });
-
-    // $.getJSON("https://api.ipify.org/?format=json", function(e) {
-    // console.log(e);  
-    // });
-    console.log("here", msg)
-    alert(msg.status)
 })
 
 

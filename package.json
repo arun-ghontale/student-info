@@ -27,5 +27,13 @@
     "request": "^2.88.0",
     "socket.io": "^2.1.1",
     "sync-request": "^6.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arun-ghontale/student-info.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arun-ghontale/student-info/issues"
+  },
+  "homepage": "https://github.com/arun-ghontale/student-info#readme"
 }
