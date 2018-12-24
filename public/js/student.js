@@ -108,7 +108,7 @@ $(document).ready(function(){
 
         // M.toast({"html" : "Mail to ramanareddysane@gmail.com is Successful", classes: 'rounded'});
 
-        $.post("http://localhost:3000/mail/",to_and_body)
+        $.post("http://206.189.140.119:3000/mail/",to_and_body)
         .done(function(data) {
         //   console.log("success : ", data);
         })
