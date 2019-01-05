@@ -2,7 +2,7 @@ const Student = require('../api/models/student');
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose')
-const docLIMIT = 100
+const docLIMIT = 50
 
 //POST to add a document to the DB
 router.post('/create', (req, res, next) => {

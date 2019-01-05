@@ -86,12 +86,16 @@ $(document).ready(function(){
         });
     });
 
-
+    var send_mail_btn_html = $("#send-email").html();
     // Send the details to 
     $("#send-email").click(function(){
         // get the value from text area
         const custom_msg = $("#custom-mail").val();
-        
+        $(this).html("Ad");
+        // change it to sending ... and then disable the button.
+        $(this).html("sending ... ");
+        $(this).attr('disabled', true);
+
         // localhost:3000/mail/ 
         // {
         //     "to": "arun.g.ghontale@gmail.com",
@@ -113,7 +117,12 @@ $(document).ready(function(){
         //   console.log("success : ", data);
         })
         .fail(function(error) {
-          console.log("failed", error);
+            console.log("failed", error);
+            // enable it and then change back the original text
+            $("#send-email").attr("disabled", false);
+            $("#send-email").html(send_mail_btn_html);
+
+            M.toast({"html" : "<span style='color:orange'>Some error happened. Please have a look at the log</span>"});
         })
         .always(function() {
           // console.log("Always");
@@ -131,6 +140,10 @@ socket.on('mailStatus', (msg) => {
     // console.log("here", msg)
     M.toast({"html" : msg.status, classes: 'rounded'});
     // alert(msg.status)
+
+    // enable it and then change back the original text
+    $("#send-email").attr("disabled", false);
+    $("#send-email").html(send_mail_btn_html);
 })
 
 

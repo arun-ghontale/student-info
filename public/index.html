@@ -14,13 +14,20 @@
     <!-- load handlebar.js --- a template loading library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" ></script>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   </head>
+
+
   <body>
+
+    <!-- Div tag for header -->
     <div class="center white-text blue darken-2" style="bakground-color:#039be5;">
       <h3 style="margin:0px;margin-bottom:3rem;padding: 1.5rem 0"> AAIC Student Dashboard </h3>
     </div>
+  
+    <!-- Div tag for search and results -->
     <div class="container">
       <div class="row">
         <!-- form for searching for a student -->
@@ -37,12 +44,23 @@
 
         <!-- place where we can show some results. -->
         <div class="results-header" style="display:none">
-          .
-        </div>
-        <div class="hide" style="border:1px solid #039be5">
 
         </div>
-        <table class="striped centered" style="display:none">
+        <!-- This section is for pagination at top of the table-->
+        <div class="pagination-header" style="text-align: center">
+          <a class="waves-effect btn-flat prev-page" disabled="disabled" style="float: left">
+              <i class="material-icons left">chevron_left</i>Prev
+          </a>
+          <span>Page </span>
+          <b class="current-page"></b>
+           of <b class="total-pages"></b>
+           ( <b class="total-docs"> </b> total )
+          <a class="waves-effect btn-flat next-page" disabled="disabled" style="float: right">
+              <i class="material-icons right">chevron_right</i>Next
+          </a>
+        </div>
+        <!-- place when we will display the student information -->
+        <table class="striped centered" style="display:none;margin-bottom:2.5rem">
             <thead>
               <tr>
                 <th>S.No</th>
@@ -70,13 +88,32 @@
               </script>
             </tbody>
         </table>
-
-        <!-- place when we will display the student information -->
-        
+        <!-- This section is for pagination -->
+        <div class="pagination-header" style="text-align: center">
+            <a class="waves-effect btn-flat prev-page" disabled="disabled" style="float: left">
+                <i class="material-icons left">chevron_left</i>Prev
+            </a>
+            <span>Page </span>
+            <b class="current-page"></b>
+              of <b class="total-pages"></b>
+              ( <b class="total-docs"> </b> total )
+            <a class="waves-effect btn-flat next-page" disabled="disabled" style="float: right">
+                <i class="material-icons right">chevron_right</i>Next
+            </a>
+        </div>
 
        </div>
     </div>
 
+    <!-- footer -->
+    <div class="footer">
+        &copy; 2019 AAIC Technologies Pvt Ltd.
+    </div>
+
+    <!-- floating buton for scrollling to top. -->
+    <a class="move-to-top-btn tooltipped btn-flat waves-effect" data-position="top" data-tooltip="Scroll to top">
+      <i class="material-icons">arrow_upward</i>
+    </a>
     <script src="/js/libs/jquery-3.3.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -78,3 +78,29 @@ textarea.materialize-textarea{
 a#send-email:hover, a#send-email:focus {
   box-shadow: -2px 5px #2765a238;
 }
+
+
+/* For footer */
+.footer{
+  color: white;
+  text-align: center;
+  background: #1976d2;
+  padding: 1rem 0px;
+  margin-top: 7rem
+}
+
+/* floating point button to go to top */
+.move-to-top-btn{
+  position: fixed;
+  bottom: 6rem;
+  right: 4rem;
+  /* border: 2px solid black; */
+  height: 5rem;
+  padding: 1rem;
+  width: 6rem;
+  /* border-radius: 50%; */
+}
+
+.move-to-top-btn i{
+  font-size: 4rem;
+}
