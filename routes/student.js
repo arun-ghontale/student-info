@@ -130,7 +130,7 @@ router.post('/', (req, res, next) => {
                     res.status(201).json({
                         docs: students,
                         ndocs: count,
-                        pg: page
+                        pg: page+1
                     });
                 }
             });
