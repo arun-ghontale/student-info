@@ -86,7 +86,7 @@ $(document).ready(function(){
         });
     });
 
-    var send_mail_btn_html = $("#send-email").html();
+     send_mail_btn_html = $("#send-email").html();
     // Send the details to 
     $("#send-email").click(function(){
         // get the value from text area
@@ -133,7 +133,7 @@ $(document).ready(function(){
 
 // socket on successfully sending the mail..
 var socket = io();
-
+var send_mail_btn_html="";
 
 socket.on('mailStatus', (msg) => {
 

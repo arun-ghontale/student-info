@@ -36,6 +36,7 @@ csv()
         read_score: 0,
         auc_score: 0,
       };
+      console.log(data);
       //sync request
       var res = syncRequest("POST", "http://206.189.140.119:3000/assignment", {
         json: data
